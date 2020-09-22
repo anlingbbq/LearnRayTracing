@@ -8,7 +8,7 @@ class AntialiasingNormalRender : public PPMRender
 public:
 	void init() override
 	{
-		ns = 100;
+		ns = 10;
 	}
 
 	float hit_sphere(const vec3& center, float radius, const ray& r)
@@ -34,9 +34,7 @@ public:
 			vec3 N = unit_vector(r.point_at_parameter(t) - vec3(0, 0, -1));
 			return 0.5f * vec3(N.x() + 1, N.y() + 1, N.z() + 1);
 		}
-		vec3 unit_direction = unit_vector(r.direction());
-		t = 0.5f * (unit_direction.y() + 1.0f);
-		return (1.0f - t) * vec3(1.0f, 1.0f, 1.0f) + t * vec3(0.5f, 0.7f, 1.0f);
+		return PPMRender::color(r, world);
 	}
 };
 

@@ -9,7 +9,7 @@
 vec3 color(const ray& r)
 {
 	vec3 uint_direciton = unit_vector(r.direction());
-	float t = 0.5f * (uint_direciton.y() + 1.0);
+	float t = 0.5f * (uint_direciton.y() + 1.0f);
 	return (1.0f - t) * vec3(1.0f, 1.0f, 1.0f) + t * vec3(0.5f, 0.7f, 1.0f);
 }
 

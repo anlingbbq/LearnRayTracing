@@ -12,6 +12,9 @@ using namespace std;
 
 bool hit_sphere(const vec3& center, float radius, const ray& r)
 {
+	// dot((p(t) - c),(p(t) - c)) = R*R
+	// dot((A + t*B - C),(A + t*B - C)) = R*R
+	// t*t*dot(B,B) + 2*t*dot(A-C,A-C) + dot(C,C) - R*R = 0
 	vec3 oc = r.origin() - center;
 	float a = dot(r.direction(), r.direction());
 	float b = 2.0f * dot(oc, r.direction());

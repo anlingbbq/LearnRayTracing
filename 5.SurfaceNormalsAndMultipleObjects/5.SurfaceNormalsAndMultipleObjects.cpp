@@ -39,12 +39,12 @@ class NormalListRender : public PPMRender
 public:
 	void init() override
 	{
-		hitable** list = new hitable*[2];
+		hitable** list = new hitable * [2];
 		list[0] = new sphere(vec3(0.0f, 0.0f, -1.0f), 0.5f);
 		list[1] = new sphere(vec3(0, -100.5, -1), 100);
 		world = new hitable_list(list, 2);
 	}
-	
+
 	vec3 color(const ray& r, hitable* world)
 	{
 		hit_record rec;

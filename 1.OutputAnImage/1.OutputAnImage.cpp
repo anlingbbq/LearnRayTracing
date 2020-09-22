@@ -24,6 +24,9 @@ int main()
 		for (int i = 0; i < nx; i++)
 		{
 			vec3 col(float(i) / float(nx), float(j) / float(ny), 0.2f);
+			//vec3 col1(float(j) / float(ny), float(j) / float(ny), float(j) / float(ny));
+			//vec3 col2(float(i) / float(nx), float(i) / float(nx), float(i) / float(nx));
+			//vec3 col = (col1 + col2) / 2;
 			int ir = int(255.9 * col[0]);
 			int ig = int(255.9 * col[1]);
 			int ib = int(255.9 * col[2]);

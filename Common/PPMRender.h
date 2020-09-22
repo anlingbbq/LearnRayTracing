@@ -5,6 +5,7 @@
 #include "sphere.h"
 #include "hitable_list.h"
 #include "camera.h"
+#include "material.h"
 
 using namespace std;
 
@@ -32,8 +33,6 @@ public:
 		streambuf* fileBuf = of.rdbuf();
 		cout.rdbuf(fileBuf);
 
-		int nx = 200;
-		int ny = 100;
 		cout << "P3\n" << nx << " " << ny << "\n255\n";
 
 		camera cam;
@@ -52,6 +51,7 @@ public:
 						col += color(r, world);
 					}
 					col /= float(ns);
+					//col = vec3(sqrt(col[0]), sqrt(col[1]), sqrt(col[2]));
 				}
 				else
 				{
@@ -77,5 +77,7 @@ public:
 
 protected:
 	hitable* world;
+	int nx = 200;
+	int ny = 100;
 	int ns = 0;
 };

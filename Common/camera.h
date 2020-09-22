@@ -37,10 +37,10 @@ public:
 		vertical = 2 * half_height * focus_dist * v;
 	}
 	ray get_ray(float s, float t) {
-		vec3 rd = lens_radius * random_in_unit_disk();
-		vec3 offset = u * rd.x() + v * rd.y();
-		return ray(origin + offset, lower_left_corner + s * horizontal + t * vertical - origin - offset);
-		//return ray(origin, lower_left_corner + s * horizontal + t * vertical - origin);
+		//vec3 rd = lens_radius * random_in_unit_disk();
+		//vec3 offset = u * rd.x() + v * rd.y();
+		//return ray(origin + offset, lower_left_corner + s * horizontal + t * vertical - origin - offset);
+		return ray(origin, lower_left_corner + s * horizontal + t * vertical - origin);
 	}
 
 	vec3 origin;
@@ -51,7 +51,3 @@ public:
 	float lens_radius = 0.0f;
 };
 #endif
-
-
-
-
