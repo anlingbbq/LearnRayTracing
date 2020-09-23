@@ -14,7 +14,7 @@ class PPMRender
 public:
 	virtual void init() {};
 	
-	virtual vec3 color(const ray& r, hitable* world = nullptr)
+	virtual vec3 color(const ray& r, hitable* world = nullptr, int depth = 0)
 	{
 		vec3 uint_direciton = unit_vector(r.direction());
 		float t = 0.5f * (uint_direciton.y() + 1.0f);
@@ -35,7 +35,9 @@ public:
 
 		cout << "P3\n" << nx << " " << ny << "\n255\n";
 
-		camera cam;
+		if (cam == nullptr)
+			cam = new camera();
+		
 		for (int j = ny - 1; j >= 0; j--)
 		{
 			for (int i = 0; i < nx; i++)
@@ -45,19 +47,19 @@ public:
 				{
 					for (int s = 0; s < ns; s++)
 					{
-						float u = float(i + drand48()) / float(nx);
-						float v = float(j + drand48()) / float(ny);
-						ray r = cam.get_ray(u, v);
+						float u = (i + drand48()) / float(nx);
+						float v = (j + drand48()) / float(ny);
+						ray r = cam->get_ray(u, v);
 						col += color(r, world);
 					}
 					col /= float(ns);
-					//col = vec3(sqrt(col[0]), sqrt(col[1]), sqrt(col[2]));
+					col = vec3(sqrt(col[0]), sqrt(col[1]), sqrt(col[2]));
 				}
 				else
 				{
 					float u = float(i) / float(nx);
 					float v = float(j) / float(ny);
-					ray r = cam.get_ray(u, v);
+					ray r = cam->get_ray(u, v);
 					col = color(r, world);
 				}
 				
@@ -76,6 +78,7 @@ public:
 	}
 
 protected:
+	camera* cam;
 	hitable* world;
 	int nx = 200;
 	int ny = 100;

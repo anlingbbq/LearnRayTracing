@@ -5,19 +5,27 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudyTheRayRracing", "StudyTheRayRracing\StudyTheRayRracing.vcxproj", "{9B2F15B4-B49E-4CAD-A874-BCCFC1EC0AA1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.OutputAnImage", "1.OutputAnImage\1.OutputAnImage.vcxproj", "{F9E6301B-087E-4737-8992-7233A85B5178}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01.OutputAnImage", "1.OutputAnImage\1.OutputAnImage.vcxproj", "{F9E6301B-087E-4737-8992-7233A85B5178}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.RaysASimpleSameraAndBackground", "3.RaysASimpleSameraAndBackground\3.RaysASimpleSameraAndBackground.vcxproj", "{2431D2CF-8E6E-46C8-A448-72EEAD6550E3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03.RaysASimpleSameraAndBackground", "3.RaysASimpleSameraAndBackground\3.RaysASimpleSameraAndBackground.vcxproj", "{2431D2CF-8E6E-46C8-A448-72EEAD6550E3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.AddingASphere", "4.AddingASphere\4.AddingASphere.vcxproj", "{A223DA35-15DC-460C-B490-48B11C3C2035}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04.AddingASphere", "4.AddingASphere\4.AddingASphere.vcxproj", "{A223DA35-15DC-460C-B490-48B11C3C2035}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.SurfaceNormalsAndMultipleObjects", "5.SurfaceNormalsAndMultipleObjects\5.SurfaceNormalsAndMultipleObjects.vcxproj", "{0CAA55E8-830D-42B2-A3B6-3E0A84C67F09}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05.SurfaceNormalsAndMultipleObjects", "5.SurfaceNormalsAndMultipleObjects\5.SurfaceNormalsAndMultipleObjects.vcxproj", "{0CAA55E8-830D-42B2-A3B6-3E0A84C67F09}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.Antialiasing", "6.Antialiasing\6.Antialiasing.vcxproj", "{E7CE9E2B-8DFE-44F8-84D0-12998C727ABA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06.Antialiasing", "6.Antialiasing\6.Antialiasing.vcxproj", "{E7CE9E2B-8DFE-44F8-84D0-12998C727ABA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7.DiffuseMaterials", "7.DiffuseMaterials\7.DiffuseMaterials.vcxproj", "{7EB3554B-BADF-4330-A534-B54BEB11ABC3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07.DiffuseMaterials", "7.DiffuseMaterials\7.DiffuseMaterials.vcxproj", "{7EB3554B-BADF-4330-A534-B54BEB11ABC3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.Metal", "8.Metal\8.Metal.vcxproj", "{0FE3050C-817D-4396-A20D-CBBDE0B4BA42}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08.Metal", "8.Metal\8.Metal.vcxproj", "{0FE3050C-817D-4396-A20D-CBBDE0B4BA42}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09.Dielectrics", "9.Dielectrics\9.Dielectrics.vcxproj", "{127E3629-2592-471A-83FE-E520015A6B55}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10.PositionableCamera", "10.PositionableCamera\10.PositionableCamera.vcxproj", "{BF8A0FB8-C169-401A-89E5-EC3A0D69FCDC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11.DefocusBlur", "11.DefocusBlur\11.DefocusBlur.vcxproj", "{B31DD3B5-83EE-40F3-989E-2887960C0DCD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12.WhereNext", "12.WhereNext\12.WhereNext.vcxproj", "{1CDE4329-4F94-4556-BEEB-41B0FA6CD191}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +99,38 @@ Global
 		{0FE3050C-817D-4396-A20D-CBBDE0B4BA42}.Release|x64.Build.0 = Release|x64
 		{0FE3050C-817D-4396-A20D-CBBDE0B4BA42}.Release|x86.ActiveCfg = Release|Win32
 		{0FE3050C-817D-4396-A20D-CBBDE0B4BA42}.Release|x86.Build.0 = Release|Win32
+		{127E3629-2592-471A-83FE-E520015A6B55}.Debug|x64.ActiveCfg = Debug|x64
+		{127E3629-2592-471A-83FE-E520015A6B55}.Debug|x64.Build.0 = Debug|x64
+		{127E3629-2592-471A-83FE-E520015A6B55}.Debug|x86.ActiveCfg = Debug|Win32
+		{127E3629-2592-471A-83FE-E520015A6B55}.Debug|x86.Build.0 = Debug|Win32
+		{127E3629-2592-471A-83FE-E520015A6B55}.Release|x64.ActiveCfg = Release|x64
+		{127E3629-2592-471A-83FE-E520015A6B55}.Release|x64.Build.0 = Release|x64
+		{127E3629-2592-471A-83FE-E520015A6B55}.Release|x86.ActiveCfg = Release|Win32
+		{127E3629-2592-471A-83FE-E520015A6B55}.Release|x86.Build.0 = Release|Win32
+		{BF8A0FB8-C169-401A-89E5-EC3A0D69FCDC}.Debug|x64.ActiveCfg = Debug|x64
+		{BF8A0FB8-C169-401A-89E5-EC3A0D69FCDC}.Debug|x64.Build.0 = Debug|x64
+		{BF8A0FB8-C169-401A-89E5-EC3A0D69FCDC}.Debug|x86.ActiveCfg = Debug|Win32
+		{BF8A0FB8-C169-401A-89E5-EC3A0D69FCDC}.Debug|x86.Build.0 = Debug|Win32
+		{BF8A0FB8-C169-401A-89E5-EC3A0D69FCDC}.Release|x64.ActiveCfg = Release|x64
+		{BF8A0FB8-C169-401A-89E5-EC3A0D69FCDC}.Release|x64.Build.0 = Release|x64
+		{BF8A0FB8-C169-401A-89E5-EC3A0D69FCDC}.Release|x86.ActiveCfg = Release|Win32
+		{BF8A0FB8-C169-401A-89E5-EC3A0D69FCDC}.Release|x86.Build.0 = Release|Win32
+		{B31DD3B5-83EE-40F3-989E-2887960C0DCD}.Debug|x64.ActiveCfg = Debug|x64
+		{B31DD3B5-83EE-40F3-989E-2887960C0DCD}.Debug|x64.Build.0 = Debug|x64
+		{B31DD3B5-83EE-40F3-989E-2887960C0DCD}.Debug|x86.ActiveCfg = Debug|Win32
+		{B31DD3B5-83EE-40F3-989E-2887960C0DCD}.Debug|x86.Build.0 = Debug|Win32
+		{B31DD3B5-83EE-40F3-989E-2887960C0DCD}.Release|x64.ActiveCfg = Release|x64
+		{B31DD3B5-83EE-40F3-989E-2887960C0DCD}.Release|x64.Build.0 = Release|x64
+		{B31DD3B5-83EE-40F3-989E-2887960C0DCD}.Release|x86.ActiveCfg = Release|Win32
+		{B31DD3B5-83EE-40F3-989E-2887960C0DCD}.Release|x86.Build.0 = Release|Win32
+		{1CDE4329-4F94-4556-BEEB-41B0FA6CD191}.Debug|x64.ActiveCfg = Debug|x64
+		{1CDE4329-4F94-4556-BEEB-41B0FA6CD191}.Debug|x64.Build.0 = Debug|x64
+		{1CDE4329-4F94-4556-BEEB-41B0FA6CD191}.Debug|x86.ActiveCfg = Debug|Win32
+		{1CDE4329-4F94-4556-BEEB-41B0FA6CD191}.Debug|x86.Build.0 = Debug|Win32
+		{1CDE4329-4F94-4556-BEEB-41B0FA6CD191}.Release|x64.ActiveCfg = Release|x64
+		{1CDE4329-4F94-4556-BEEB-41B0FA6CD191}.Release|x64.Build.0 = Release|x64
+		{1CDE4329-4F94-4556-BEEB-41B0FA6CD191}.Release|x86.ActiveCfg = Release|Win32
+		{1CDE4329-4F94-4556-BEEB-41B0FA6CD191}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

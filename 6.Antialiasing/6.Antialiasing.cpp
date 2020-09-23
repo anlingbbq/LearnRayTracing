@@ -26,7 +26,7 @@ public:
 		return (-b - sqrt(discriminant)) / (2.0f * a);
 	}
 
-	vec3 color(const ray& r, hitable* world = nullptr) override
+	vec3 color(const ray& r, hitable* world = nullptr, int depth = 0) override
 	{
 		float t = hit_sphere(vec3(0, 0, -1), 0.5f, r);
 		if (t > 0)

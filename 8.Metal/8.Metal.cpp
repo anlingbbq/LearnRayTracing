@@ -3,9 +3,41 @@
 
 #include "PPMRender.h"
 
+class MetalRender : public PPMRender
+{
+	void init() override
+	{
+		ns = 100;
+		hitable** list = new hitable *[4];
+		list[0] = new sphere(vec3(0, 0, -1.0f), 0.5f, new lambertian(vec3(0.8f, 0.3f, 0.3f)));
+		list[1] = new sphere(vec3(0, -100.5f, -1.0f), 100, new lambertian(vec3(0.8f, 0.8f, 0)));
+		//list[1] = new sphere(vec3(0, -100.5f, -1.0f), 100, new metal(vec3(0.8f, 0.8f, 0)));
+		list[2] = new sphere(vec3(1.0f, 0, -1.0f), 0.5f, new metal(vec3(0.8f, 0.6f, 0.2f)));
+		list[3] = new sphere(vec3(-1.0f, 0, -1.0f), 0.5f, new metal(vec3(0.8f, 0.8f, 0.8f), 0.3f));
+		world = new hitable_list(list, 4);
+	}
+
+	vec3 color(const ray& r, hitable* world, int depth) override
+	{
+		hit_record rec;
+		if (world->hit(r, 0.001f, FLT_MAX, rec))
+		{
+			ray scattered;
+			vec3 attenuation;
+			if (depth < 50 && rec.mat_ptr->scatter(r, rec, attenuation, scattered))
+			{
+				return attenuation * color(scattered, world, depth + 1);
+			}
+			return vec3(0, 0, 0);
+		}
+		return PPMRender::color(r, world, depth);
+	}
+};
+
 int main()
 {
-	
+	MetalRender mr;
+	mr.output("MetalRender");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

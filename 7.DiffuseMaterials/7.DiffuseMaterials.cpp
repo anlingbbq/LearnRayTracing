@@ -33,7 +33,7 @@ public:
 		return p;
 	}
 
-	vec3 color(const ray& r, hitable* world)
+	vec3 color(const ray& r, hitable* world, int depth = 0) override
 	{
 		hit_record rec;
 		if (world->hit(r, 0.0f, FLT_MAX, rec))
